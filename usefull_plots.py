@@ -1,12 +1,13 @@
 import seaborn as sns
-import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(15,5))
-ax.grid()
-ax.set_ylim(200, 1000)
-ax.set_xlim(0, 120)
-ax.set(xlabel='step', ylabel='', title='')
+sns.set_style('whitegrid')
 
-y = [...]
-x = range(0,len(y))
-ax = sns.lineplot(x=x,y=y, color='red')
+Y1 = [...]
+Y2 = [...]
+
+ax = sns.lineplot(x=range(0, len(Y1)), y=Y1, color='red', lw=2)
+ax1 = sns.lineplot(x=range(0, len(Y2)), y=Y2, color='blue', lw=2)
+
+ax1.set_ylim(200, 1500)
+ax1.set_xlim(0, 50)
+ax1.figure.set_size_inches(15,5)
